@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Grid } from 'semantic-ui-react'
-import LeftMenu from '../LeftMenu/LeftMenu'
+import LeftMenu from '../leftMenu/LeftMenu'
 import MainLayout from '../mainLayout/MainLayout'
 
 export default class Dashboard extends Component {
