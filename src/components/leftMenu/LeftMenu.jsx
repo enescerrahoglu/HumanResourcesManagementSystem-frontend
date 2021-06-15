@@ -6,9 +6,9 @@ export default function LeftMenu() {
     return (
         <div>
             <Menu fluid vertical color='orange'>
-                <Menu.Item className="leftMenu" name='run'/>
-                <Menu.Item className="leftMenu" name='walk'/>
-                <Menu.Item className="leftMenu" name='bike'/>
+                <Menu.Item className="leftMenu" name='system personnel'/>
+                <Menu.Item className="leftMenu" name='job seekers'/>
+                <Menu.Item className="leftMenu" name='employers'/>
             </Menu>
         </div>
     )

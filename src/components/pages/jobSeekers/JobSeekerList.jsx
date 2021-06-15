@@ -16,9 +16,14 @@ export default function JobSeekerList() {
             <Table celled > 
                 <Table.Header>
                     <Table.Row>
+                        <Table.HeaderCell>İş Arayan Listesi</Table.HeaderCell>
+                    </Table.Row>
+                </Table.Header>
+                <Table.Header>
+                    <Table.Row>
                         <Table.HeaderCell>Email</Table.HeaderCell>
-                        <Table.HeaderCell>İsim</Table.HeaderCell>
-                        <Table.HeaderCell>Soyisim</Table.HeaderCell>
+                        <Table.HeaderCell>Ad</Table.HeaderCell>
+                        <Table.HeaderCell>Soyad</Table.HeaderCell>
                         <Table.HeaderCell>Doğum Yılı</Table.HeaderCell>
                     </Table.Row>
                 </Table.Header>

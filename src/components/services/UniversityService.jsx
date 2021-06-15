@@ -2,6 +2,6 @@ import axios from "axios"
 
 export default class UniversityService {
     getUniversities() {
-        return axios.get("/api/universities/getAll")
+        return axios.get("http://localhost:8080/api/universities/getAll")
     }
 }

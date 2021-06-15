@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import UniversityService from '../../services/UniversityService'
+import { Icon, Menu, Table } from 'semantic-ui-react'
 
 export default function UniversityList() {
 
@@ -9,13 +10,17 @@ export default function UniversityList() {
         let universityService = new UniversityService()
         universityService.getUniversities().then(result => setUniversities(result.data.data))
     }, [])
-
     return (
         <div>
             <Table celled >
                 <Table.Header>
                     <Table.Row>
-                        <Table.HeaderCell>Üniversite</Table.HeaderCell>
+                        <Table.HeaderCell>Üniversiteler</Table.HeaderCell>
+                    </Table.Row>
+                </Table.Header>
+                <Table.Header>
+                    <Table.Row>
+                        <Table.HeaderCell>Üniversite Adı</Table.HeaderCell>
                     </Table.Row>
                 </Table.Header>
                 <Table.Body>
