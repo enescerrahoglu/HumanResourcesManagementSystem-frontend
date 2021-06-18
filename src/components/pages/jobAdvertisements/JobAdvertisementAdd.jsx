@@ -3,11 +3,11 @@ import React, { useEffect, useState } from 'react'
 import { Button, Segment, Input, Dropdown } from 'semantic-ui-react'
 import CityService from '../../services/CityService';
 import JobAdvertisementService from '../../services/JobAdvertisementService';
-import JobPositionService from '../../services/JobPositionService';
 import WorkTimeTypeService from '../../services/WorkTimeTypeService';
 import WorkTypeService from '../../services/WorkTypeService';
 import '../../../css/JobAdvertisementAdd.css'
 import * as Yup from "yup";
+import JobPositionService from '../../services/JobPositionService';
 
 export default function JobAdvertisementAdd() {
 
@@ -36,8 +36,8 @@ export default function JobAdvertisementAdd() {
     }));
     const getJobPositions = jobPositions.map((position, index) => ({
         key: index,
-        text: position.positionName,
-        value: position.positionId,
+        text: position.jobPositionName,
+        value: position.jobPositionId,
     }));
     const getWorkTimeTypes = workTimeTypes.map((workTimeType, index) => ({
         key: index,
@@ -125,15 +125,15 @@ export default function JobAdvertisementAdd() {
                                     fluid
                                     search
                                     selection
-                                    id="positionId"
+                                    id="jobPositionId"
                                     options={getJobPositions}
                                     onChange={(event, data) =>
-                                        formik.setFieldValue("positionId", data.value)
+                                        formik.setFieldValue("jobPositionId", data.value)
                                     }
-                                    value={formik.values.positionId}
+                                    value={formik.values.jobPositionId}
                                 />
-                                {formik.errors.positionId && formik.touched.positionId && (
-                                    <p style={{ color: "red" }}>{formik.errors.positionId}</p>
+                                {formik.errors.jobPositionId && formik.touched.jobPositionId && (
+                                    <p style={{ color: "red" }}>{formik.errors.jobPositionId}</p>
                                 )}
                             </div>
                             <div className="divStyle">
