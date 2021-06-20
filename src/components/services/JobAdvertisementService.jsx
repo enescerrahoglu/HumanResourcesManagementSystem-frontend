@@ -11,4 +11,10 @@ export default class JobAdvertisementService {
     addJobAdvertisement(jobAdvertisement){
         return axios.post("http://localhost:8080/api/jobAdvertisements/add", jobAdvertisement)
     }
+    closeTheJobAdvertisement(employerId, jobAdvertisementId, status){
+        return axios.post("/api/jobAdvertisement/closeTheJobAdvertisement?employerId=" + employerId + "&jobAdvertisementId=" + jobAdvertisementId + "&status=" + status)
+    }
+    getJobAdvertisementForEmployerId(employerId){
+        return axios.get("/api/jobAdvertisement/getByEmployerJobAdvertisements?userId=" + employerId)
+    }
 }

@@ -9,6 +9,8 @@ import JobAdvertisementDetails from '../pages/jobAdvertisements/JobAdvertisement
 import TechnologyAdd from '../pages/cvTechnologies/TechnologyAdd'
 import Login from '../pages/login/Login'
 import JobAdvertisementAdd from '../pages/jobAdvertisements/JobAdvertisementAdd'
+import JobAdvertisementListForEmployer from '../pages/jobAdvertisements/JobAdvertisementListForEmployer'
+import JobAdvertisementDetailForEmployer from '../pages/jobAdvertisements/JobAdvertisementDetailForEmployer'
 
 export default function MainLayout() {
     return (
@@ -17,6 +19,8 @@ export default function MainLayout() {
         <Route exact path="/jobAdvertisement" component={JobAdvertisementList} />
         <Route exact path="/jobAdvertisementAdd" component={JobAdvertisementAdd} />
         <Route exact path="/jobAdvertisement/:jobAdvertisementId" component={JobAdvertisementDetails} />
+        <Route exact path="/jobAdvertisementForEmployer/:employerId" component={JobAdvertisementListForEmployer} />
+        <Route exact path="/jobAdvertisementDetailForEmployer/:jobAdvertisementId" component={JobAdvertisementDetailForEmployer} />
         <Route exact path="/employerRegister" component={EmployerRegister} />
         <Route exact path="/jobSeekerRegister" component={JobSeekerRegister} />
         <Route exact path="/educationInformation" component={CvEducationInformationList} />
